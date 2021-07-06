@@ -1,0 +1,78 @@
+﻿<Window x:Name="maraton" x:Class="WpfMaraton.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfMaraton"
+        mc:Ignorable="d"
+        Title="Maratonváltó" Height="450" Width="800" ResizeMode="CanMinimize">
+	<Grid>
+		<TabControl x:Name="tb_ctrl">
+			<TabItem x:Name="futok" Width="150" Height="30" Header="Futók" FontSize="16">
+				<Grid>
+					<DataGrid x:Name="dg_futoadatok" Margin="16,145,23,10"></DataGrid>
+					<TextBox x:Name="txt_fnev" Margin="112,10,425,335" TextChanged="txt_fnev_TextChanged" MaxLines="1" MaxLength="20"></TextBox>
+					<Label x:Name="lbl_fnev" Margin="4,10,666,330" Content="A futó neve:"></Label>
+					<Label x:Name="lbl_szev" Margin="0,87,666,258" Content="Születési éve:"/>
+					<Label x:Name="lbl_szho" Margin="253,87,446,255" Content="Hónapja:"/>
+					<TextBox x:Name="txt_szev" Margin="113,87,535,258" MaxLines="1" MaxLength="4" TextChanged="txt_szev_TextChanged"/>
+					<TextBox x:Name="txt_szho" Margin="333,87,389,258" MaxLines="1" MaxLength="2" TextChanged="txt_szho_TextChanged"/>
+					<Label x:Name="lbl_csapaz" Margin="421,87,191,255" Content="A csapat azonosítója:"/>
+					<TextBox x:Name="txt_csapaz" Margin="587,87,91,258" MaxLines="1" MaxLength="4" TextChanged="txt_csapaz_TextChanged"/>
+					<Label x:Name="lbl_fnem" Margin="368,9,301,330" Content="A futó neme:"/>
+					<ComboBox x:Name="cb_fnem" Margin="479,12,231,330" SelectedIndex="0" RenderTransformOrigin="-0.123,0.5">
+						<ComboBoxItem Content="férfi"/>
+						<ComboBoxItem Content="nő"/>
+					</ComboBox>
+					<Button x:Name="btn_adatbevitel" Margin="597,12,23,318" Content="Adatbevitel" IsEnabled="False" Click="btn_adatbevitel_Click"></Button>
+				</Grid>
+			</TabItem>
+			<TabItem x:Name="eredmeny" Width="150" Height="30" Header="Eredmény" FontSize="16">
+				<Grid>
+					<DataGrid x:Name="dg_eredmenyadatok" Margin="10,10,364,10" SelectionMode="Single" SelectionChanged="dg_eredmenyadatok_SelectionChanged"></DataGrid>
+					<Label x:Name="lbl_fazon" Margin="467,10,172,325" Content="A futó azonosítója:"></Label>
+					<TextBox x:Name="txt_fazon" Margin="616,10,19,325" TextChanged="txt_fazon_TextChanged" MaxLines="1" MaxLength="6"></TextBox>
+					<Label x:Name="lbl_kor" Margin="467,111,126,224" Content="A futó köre (hanyadik?):"></Label>
+					<ComboBox x:Name="cb_kor" Margin="667,111,22,235" SelectedIndex="0">
+						<ComboBoxItem Content="1"/>
+						<ComboBoxItem Content="2"/>
+						<ComboBoxItem Content="3"/>
+						<ComboBoxItem Content="4"/>
+						<ComboBoxItem Content="5"/>
+						<ComboBoxItem Content="6"/>
+					</ComboBox>
+					<Label x:Name="lbl_ido" Margin="467,63,211,277" Content="A futó ideje:"></Label>
+					<TextBox x:Name="txt_ido" Margin="577,63,19,277" TextChanged="txt_ido_TextChanged" MaxLines="1" MaxLength="6"/>
+					<Button x:Name="btn_eredmenybevitel" Margin="440,297,19,47" Content="Eredmény bevitele" IsEnabled="False" Click="btn_eredmenybevitel_Click"/>
+					<Button x:Name="btn_eredmenytorles" Margin="440,336,19,10" Content="Kijelölt sor törlése" Click="btn_eredmenytorles_Click" IsEnabled="False"/>
+				</Grid>
+			</TabItem>
+			<TabItem x:Name="lekerdezesek" Width="150" Height="30" Header="Lekérdezések" FontSize="16" GotFocus="lekerdezesek_GotFocus">
+				<Grid>
+					<Label x:Name="lbl_fszam" Margin="0,0,559,340" Content="A futók száma:"></Label>
+					<Label x:Name="lbl_legidNoAj" Margin="0,43,478,297" Content="Ajándékot kap:"/>
+					<Label x:Name="lbl_atlag" Margin="0,86,559,254" Content="Átlagos köridő:"/>
+					<Label x:Name="lbl_legkisebbNevIdo" Margin="288,0,0,340" Content="Legkisebb időt elérő neve, ideje: "/>
+					<ProgressBar x:Name="pb_legkisHely" Margin="538,43,5,297" Background="#FFBCC5C4"></ProgressBar>
+					<Label x:Name="lbl_csapsor" Margin="0,126,619,216" Content="A csapat azonosítója:"/>
+					<TextBox x:Name="txt_csapsor" Margin="169,129,559,216" TextChanged="txt_csapsor_TextChanged" MaxLines="1" MaxLength="4"/>
+					<Label x:Name="lbl_NevekCsap" Margin="0,172,619,170" Content="Csapatban lévők:"/>
+					<Label x:Name="lbl_Nev" Margin="481,155,245,185" Content="Név:"/>
+					<TextBox  x:Name="txt_Nev" Margin="543,160,5,185" TextChanged="txt_Nev_TextChanged" MaxLines="1" MaxLength="20"/>
+					<Label x:Name="lbl_SzulDat" Margin="481,203,199,137" Content="Születési év:"/>
+					<TextBox  x:Name="txt_SzulDat" Margin="579,203,91,142" MaxLines="1" MaxLength="4" TextChanged="txt_SzulDat_TextChanged"/>
+					<ListBox x:Name="lb_SzulVagyNevLista" Margin="481,246,5,10"/>
+					<Label x:Name="lbl_atlHely" Margin="334,43,250,297" Content="Átlaghoz képest a helye:"/>
+					<Label x:Name="lbl_kisebbHat" Margin="230,176,516,166" Content="&lt;6:" RenderTransformOrigin="0.5,0.341"/>
+					<ProgressBar x:Name="pb_ferfiNoEloszlas" Margin="538,104,5,236" Background="#FFEB83F0" Foreground="#FF062DB0"/>
+					<Label x:Name="lbl_ferfiNoEloszlas" Margin="334,104,250,236" Content="Férfiak: Nők:"/>
+					<Label x:Name="lbl_osszido" Margin="312,176,312,166" Content="Csapatnév;Összidő:"/>
+					<ListBox x:Name="lb_osszido" HorizontalAlignment="Left" Height="161" Margin="324,203,0,0" VerticalAlignment="Top" Width="116"/>
+					<ListBox x:Name="lb_nevek" Margin="0,203,586,7"/>
+					<ListBox x:Name="lb_kisebbHat" Margin="220,203,499,7"></ListBox>
+				</Grid>
+			</TabItem>
+		</TabControl>
+
+	</Grid>
+</Window>

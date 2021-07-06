@@ -1,0 +1,15 @@
+D:\Webfejlesztő\Hagyma alkalmazás-fejlesztés\C# projekt\WpfMaraton\WpfMaraton\bin\Debug\WpfMaraton.exe.config
+D:\Webfejlesztő\Hagyma alkalmazás-fejlesztés\C# projekt\WpfMaraton\WpfMaraton\bin\Debug\WpfMaraton.exe
+D:\Webfejlesztő\Hagyma alkalmazás-fejlesztés\C# projekt\WpfMaraton\WpfMaraton\bin\Debug\WpfMaraton.pdb
+D:\Webfejlesztő\Hagyma alkalmazás-fejlesztés\C# projekt\WpfMaraton\WpfMaraton\obj\Debug\WpfMaraton.csproj.AssemblyReference.cache
+D:\Webfejlesztő\Hagyma alkalmazás-fejlesztés\C# projekt\WpfMaraton\WpfMaraton\obj\Debug\MainWindow.g.cs
+D:\Webfejlesztő\Hagyma alkalmazás-fejlesztés\C# projekt\WpfMaraton\WpfMaraton\obj\Debug\App.g.cs
+D:\Webfejlesztő\Hagyma alkalmazás-fejlesztés\C# projekt\WpfMaraton\WpfMaraton\obj\Debug\WpfMaraton_MarkupCompile.cache
+D:\Webfejlesztő\Hagyma alkalmazás-fejlesztés\C# projekt\WpfMaraton\WpfMaraton\obj\Debug\WpfMaraton_MarkupCompile.lref
+D:\Webfejlesztő\Hagyma alkalmazás-fejlesztés\C# projekt\WpfMaraton\WpfMaraton\obj\Debug\MainWindow.baml
+D:\Webfejlesztő\Hagyma alkalmazás-fejlesztés\C# projekt\WpfMaraton\WpfMaraton\obj\Debug\WpfMaraton.g.resources
+D:\Webfejlesztő\Hagyma alkalmazás-fejlesztés\C# projekt\WpfMaraton\WpfMaraton\obj\Debug\WpfMaraton.Properties.Resources.resources
+D:\Webfejlesztő\Hagyma alkalmazás-fejlesztés\C# projekt\WpfMaraton\WpfMaraton\obj\Debug\WpfMaraton.csproj.GenerateResource.cache
+D:\Webfejlesztő\Hagyma alkalmazás-fejlesztés\C# projekt\WpfMaraton\WpfMaraton\obj\Debug\WpfMaraton.csproj.CoreCompileInputs.cache
+D:\Webfejlesztő\Hagyma alkalmazás-fejlesztés\C# projekt\WpfMaraton\WpfMaraton\obj\Debug\WpfMaraton.exe
+D:\Webfejlesztő\Hagyma alkalmazás-fejlesztés\C# projekt\WpfMaraton\WpfMaraton\obj\Debug\WpfMaraton.pdb
